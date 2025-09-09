@@ -1,0 +1,25 @@
+[project]
+name = "help_me_in_finding_job"
+version = "0.1.0"
+description = "help-me-in-finding-job using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.175.0,<1.0.0",
+    "ollama>=0.5.3",
+    "playwright>=1.55.0",
+]
+
+[project.scripts]
+help_me_in_finding_job = "help_me_in_finding_job.main:run"
+run_crew = "help_me_in_finding_job.main:run"
+train = "help_me_in_finding_job.main:train"
+replay = "help_me_in_finding_job.main:replay"
+test = "help_me_in_finding_job.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
